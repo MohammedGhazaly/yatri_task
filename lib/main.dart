@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.passengerInformationRoute,
       onGenerateRoute: RouteGenerator.getRoutes,
       title: 'Car Rental App',
