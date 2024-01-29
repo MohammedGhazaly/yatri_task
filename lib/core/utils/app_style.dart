@@ -15,4 +15,18 @@ class AppStyle {
       fontWeight: FontWeight.w400,
     );
   }
+
+  static TextStyle getTextStyleBold16(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle getTextStyleRegular16(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontWeight: FontWeight.w400,
+    );
+  }
 }

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:yatri_car_task/core/utils/app_assets.dart';
+import 'package:yatri_car_task/core/utils/app_colors.dart';
+import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/renting_progress.dart';
+import 'package:yatri_car_task/views/passenger_details/widgets/contact_number_section.dart';
 
 class PassengerDetailsBody extends StatelessWidget {
   const PassengerDetailsBody({super.key});
@@ -14,6 +18,8 @@ class PassengerDetailsBody extends StatelessWidget {
             children: [
               SizedBox(height: 25),
               RentingProgress(),
+              SizedBox(height: 17),
+              ContactNumberSection()
             ],
           ),
         ),
