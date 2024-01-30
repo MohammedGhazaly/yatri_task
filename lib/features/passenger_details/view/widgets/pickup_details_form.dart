@@ -3,6 +3,7 @@ import 'package:yatri_car_task/core/utils/app_colors.dart';
 import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/custom_text_field.dart';
 import 'package:yatri_car_task/features/passenger_details/view/widgets/check_box_and_text_field.dart';
+import 'package:yatri_car_task/features/passenger_details/view/widgets/gst_and_flight_section.dart';
 
 class PickupDetailsForm extends StatelessWidget {
   const PickupDetailsForm({super.key});
@@ -38,7 +39,7 @@ class PickupDetailsForm extends StatelessWidget {
                 maxLines: 5,
                 verticalPadding: 7),
             const SizedBox(height: 22),
-            CheckBoxAndTextField()
+            GstAndFlightSection(),
           ],
         ),
       ),

@@ -43,7 +43,7 @@ class RentingProgress extends StatelessWidget {
                 height: 45,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: AppColors.primaryColorLight,
+                  color: AppColors.primaryColorLight1,
                 ),
                 child: Center(
                   child: Image.asset(
