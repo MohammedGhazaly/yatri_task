@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:yatri_car_task/core/utils/size_config.dart';
 
 class AppStyle {
+  static TextStyle getTextStyleBold9(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 9),
+      fontWeight: FontWeight.w700,
+    );
+  }
+
   static TextStyle getTextStyleBold12(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 12),

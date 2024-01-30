@@ -5,7 +5,9 @@ import 'package:yatri_car_task/core/utils/app_colors.dart';
 import 'package:yatri_car_task/core/utils/app_style.dart';
 
 class RentingProgress extends StatelessWidget {
-  const RentingProgress({super.key});
+  final bool isPayment;
+
+  const RentingProgress({super.key, required this.isPayment});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,9 @@ class RentingProgress extends StatelessWidget {
                 height: 45,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Theme.of(context).primaryColor,
+                  color: isPayment == true
+                      ? AppColors.primaryColorLight1
+                      : Theme.of(context).primaryColor,
                 ),
                 child: Center(
                   child: Image.asset(
@@ -43,7 +47,9 @@ class RentingProgress extends StatelessWidget {
                 height: 45,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: AppColors.primaryColorLight1,
+                  color: isPayment != true
+                      ? AppColors.primaryColorLight1
+                      : Theme.of(context).primaryColor,
                 ),
                 child: Center(
                   child: Image.asset(
@@ -64,13 +70,22 @@ class RentingProgress extends StatelessWidget {
             children: [
               Text(
                 "Passenger \nDetails",
-                style: AppStyle.getTextStyleBold12(context)
-                    .copyWith(color: Theme.of(context).primaryColor),
+                style: AppStyle.getTextStyleBold12(context).copyWith(
+                    color: isPayment == true
+                        ? Colors.white
+                        : Theme.of(context).primaryColor,
+                    fontWeight:
+                        isPayment ? FontWeight.normal : FontWeight.w700),
               ),
               Text(
                 "Payment",
-                style: AppStyle.getTextStyleRegular12(context)
-                    .copyWith(color: Colors.white),
+                style: AppStyle.getTextStyleRegular12(context).copyWith(
+                    color: isPayment == true
+                        ? Theme.of(context).primaryColor
+                        : Colors.white,
+                    fontWeight: isPayment == true
+                        ? FontWeight.w700
+                        : FontWeight.normal),
               ),
             ],
           ),

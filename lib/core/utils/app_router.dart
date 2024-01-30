@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:yatri_car_task/features/passenger_details/view/passenger_details_view.dart';
+import 'package:yatri_car_task/features/payment/view/payment_view.dart';
 
 class AppRoutes {
   static const String passengerInformationRoute = "passenger-information-route";
@@ -13,6 +14,7 @@ class RouteGenerator {
         return CupertinoPageRoute(
             builder: (context) => const PassengerDetailsView());
       case AppRoutes.paymentRoute:
+        return CupertinoPageRoute(builder: (context) => const PaymentView());
       default:
         return CupertinoPageRoute(builder: (context) => const SizedBox());
     }

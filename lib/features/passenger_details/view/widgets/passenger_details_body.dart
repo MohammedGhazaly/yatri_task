@@ -15,7 +15,7 @@ class PassengerDetailsBody extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 25),
-              RentingProgress(),
+              RentingProgress(isPayment: false),
               SizedBox(height: 17),
               ContactNumberSection(),
               SizedBox(height: 12),
