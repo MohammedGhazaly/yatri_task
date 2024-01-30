@@ -6,11 +6,13 @@ class CheckBoxAndTextField extends StatelessWidget {
   final String rentType;
   final bool isActive;
   final double sizedBoxValue;
+  final void Function(bool?)? onChangedFunction;
   const CheckBoxAndTextField(
       {super.key,
       required this.rentType,
       required this.isActive,
-      required this.sizedBoxValue});
+      required this.sizedBoxValue,
+      this.onChangedFunction});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,9 @@ class CheckBoxAndTextField extends StatelessWidget {
       children: [
         Checkbox(
           value: isActive,
-          onChanged: (value) {},
+          onChanged: (value) {
+            onChangedFunction!(value);
+          },
           activeColor: AppColors.primaryColor,
         ),
         Text(
