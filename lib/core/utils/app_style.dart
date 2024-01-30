@@ -9,6 +9,13 @@ class AppStyle {
     );
   }
 
+  static TextStyle getTextStyleMedium12(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 12),
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   static TextStyle getTextStyleRegular12(BuildContext context) {
     return TextStyle(
       fontSize: getResponsiveFontSize(context, fontSize: 12),
