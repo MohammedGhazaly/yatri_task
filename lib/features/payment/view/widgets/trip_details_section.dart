@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yatri_car_task/core/utils/app_colors.dart';
-import 'package:yatri_car_task/core/utils/app_style.dart';
+import 'package:yatri_car_task/features/payment/view/widgets/travel_route.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/trip_detail_row_widget.dart';
 
 class TripDetailsSection extends StatelessWidget {
@@ -26,7 +26,8 @@ class TripDetailsSection extends StatelessWidget {
           TripDetailRowWidget(leftText: "Pickup Time", rightText: "21:00"),
           SizedBox(height: 7),
           TripDetailRowWidget(leftText: "No. of Days", rightText: "2 Days"),
-          SizedBox(height: 7),
+          SizedBox(height: 15),
+          TravelRoute()
         ],
       ),
     );
