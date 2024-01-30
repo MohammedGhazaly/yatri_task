@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yatri_car_task/core/utils/app_colors.dart';
 import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/custom_text_field.dart';
+import 'package:yatri_car_task/features/passenger_details/view/widgets/check_box_and_text_field.dart';
 
 class PickupDetailsForm extends StatelessWidget {
   const PickupDetailsForm({super.key});
@@ -37,23 +38,10 @@ class PickupDetailsForm extends StatelessWidget {
                 maxLines: 5,
                 verticalPadding: 7),
             const SizedBox(height: 22),
-            // CheckBoxAndTextField()
+            CheckBoxAndTextField()
           ],
         ),
       ),
     );
   }
 }
-
-// class CheckBoxAndTextField extends StatelessWidget {
-//   const CheckBoxAndTextField({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Row(
-//       children: [
-//         Checkbox(value: value, onChanged: (value){})
-//       ],
-//     );
-//   }
-// }
