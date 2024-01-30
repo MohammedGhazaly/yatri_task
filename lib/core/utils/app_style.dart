@@ -36,4 +36,11 @@ class AppStyle {
       fontWeight: FontWeight.w400,
     );
   }
+
+  static TextStyle getTextStyleBold20(BuildContext context) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontWeight: FontWeight.w700,
+    );
+  }
 }
