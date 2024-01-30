@@ -67,6 +67,48 @@ class TripDetailsSection extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Applied Coupon Discount",
+                style: AppStyle.getTextStyleBold12(context).copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              ),
+              Text(
+                "Rs. 300/-",
+                style: AppStyle.getTextStyleBold12(context).copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          Divider(
+            thickness: 1,
+            color: Colors.white,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Total :",
+                style: AppStyle.getTextStyleBold16(context)
+                    .copyWith(color: AppColors.primaryColor),
+              ),
+              Text(
+                "Rs. 3165/-",
+                style: AppStyle.getTextStyleBold16(context)
+                    .copyWith(color: AppColors.primaryColor),
+              ),
+            ],
+          )
         ],
       ),
     );
