@@ -4,7 +4,9 @@ import 'package:yatri_car_task/core/utils/app_style.dart';
 
 class CustomFormButton extends StatelessWidget {
   final void Function()? onTappedFunction;
-  const CustomFormButton({super.key, this.onTappedFunction});
+  final String title;
+  const CustomFormButton(
+      {super.key, this.onTappedFunction, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class CustomFormButton extends StatelessWidget {
           ),
           onPressed: onTappedFunction,
           child: Text(
-            "Continue",
+            title,
             style: AppStyle.getTextStyleBold20(context).copyWith(
               color: Colors.white,
             ),

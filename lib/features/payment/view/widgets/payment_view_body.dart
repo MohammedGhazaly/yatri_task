@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:yatri_car_task/core/utils/app_colors.dart';
-import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/renting_progress.dart';
+import 'package:yatri_car_task/core/widgets/custom_form_button.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/apply_button.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/coupon_code_button.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/trip_details_section.dart';
@@ -17,14 +16,14 @@ class PaymentViewBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 25),
-              RentingProgress(
+              const SizedBox(height: 25),
+              const RentingProgress(
                 isPayment: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Row(
+              const Row(
                 children: [
                   CouponCodeButton(),
                   SizedBox(
@@ -35,10 +34,21 @@ class PaymentViewBody extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
-              TripDetailsSection(),
+              const TripDetailsSection(),
+              const SizedBox(
+                height: 16,
+              ),
+              CustomFormButton(
+                title: "Pay Now",
+                onTappedFunction: () {},
+              ),
+              const SizedBox(
+                height: 30,
+              )
+              // PercentageRadioButtonSection(),
             ],
           ),
         ),

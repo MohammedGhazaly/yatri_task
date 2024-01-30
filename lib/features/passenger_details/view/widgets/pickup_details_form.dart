@@ -3,7 +3,7 @@ import 'package:yatri_car_task/core/utils/app_colors.dart';
 import 'package:yatri_car_task/core/utils/app_router.dart';
 import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/custom_text_field.dart';
-import 'package:yatri_car_task/features/passenger_details/view/widgets/custom_form_button.dart';
+import 'package:yatri_car_task/core/widgets/custom_form_button.dart';
 import 'package:yatri_car_task/features/passenger_details/view/widgets/gst_and_flight_section.dart';
 
 class PickupDetailsForm extends StatelessWidget {
@@ -47,9 +47,11 @@ class PickupDetailsForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          CustomFormButton(onTappedFunction: () {
-            Navigator.pushNamed(context, AppRoutes.paymentRoute);
-          }),
+          CustomFormButton(
+              title: "Continue",
+              onTappedFunction: () {
+                Navigator.pushNamed(context, AppRoutes.paymentRoute);
+              }),
           const SizedBox(height: 10)
         ],
       ),
