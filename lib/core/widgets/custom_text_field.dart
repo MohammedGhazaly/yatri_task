@@ -4,22 +4,30 @@ import 'package:yatri_car_task/core/utils/app_style.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
-  const CustomTextField({super.key, required this.hintText});
+  final int maxLines;
+  final double verticalPadding;
+  const CustomTextField(
+      {super.key,
+      required this.hintText,
+      this.maxLines = 1,
+      this.verticalPadding = 0});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines,
       cursorColor: AppColors.primaryColor,
       style: AppStyle.getTextStyleBold12(context).copyWith(
         color: AppColors.primaryColor,
       ),
       decoration: InputDecoration(
         hintText: hintText,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 17, vertical: 0),
+        contentPadding:
+            EdgeInsets.symmetric(horizontal: 17, vertical: verticalPadding),
         fillColor: Colors.white,
         filled: true,
         hintStyle: AppStyle.getTextStyleMedium12(context).copyWith(
-          color: AppColors.primaryColor.withOpacity(0.6),
+          color: AppColors.primaryColor,
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:yatri_car_task/core/utils/app_colors.dart';
-import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/renting_progress.dart';
-import 'package:yatri_car_task/views/passenger_details/widgets/contact_number_section.dart';
-import 'package:yatri_car_task/views/passenger_details/widgets/pickup_details_form.dart';
+import 'package:yatri_car_task/features/passenger_details/widgets/contact_number_section.dart';
+import 'package:yatri_car_task/features/passenger_details/widgets/pickup_details_form.dart';
 
 class PassengerDetailsBody extends StatelessWidget {
   const PassengerDetailsBody({super.key});

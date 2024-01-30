@@ -25,13 +25,35 @@ class PickupDetailsForm extends StatelessWidget {
                 color: AppColors.primaryColor,
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            CustomTextField(hintText: "Passenger Name")
+            const SizedBox(height: 20),
+            const CustomTextField(hintText: "Passenger Name"),
+            const SizedBox(height: 15),
+            const CustomTextField(hintText: "Mobile Number"),
+            const SizedBox(height: 15),
+            const CustomTextField(hintText: "Pickup Address"),
+            const SizedBox(height: 15),
+            const CustomTextField(
+                hintText: "Comment if any instruction for driver",
+                maxLines: 5,
+                verticalPadding: 7),
+            const SizedBox(height: 22),
+            // CheckBoxAndTextField()
           ],
         ),
       ),
     );
   }
 }
+
+// class CheckBoxAndTextField extends StatelessWidget {
+//   const CheckBoxAndTextField({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       children: [
+//         Checkbox(value: value, onChanged: (value){})
+//       ],
+//     );
+//   }
+// }

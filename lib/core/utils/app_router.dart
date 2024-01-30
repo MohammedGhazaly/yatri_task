@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:yatri_car_task/views/passenger_details/passenger_details_view.dart';
+import 'package:yatri_car_task/features/passenger_details/passenger_details_view.dart';
 
 class AppRoutes {
   static const String passengerInformationRoute = "passenger-information-route";
