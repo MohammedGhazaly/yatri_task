@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yatri_car_task/core/utils/app_colors.dart';
+import 'package:yatri_car_task/core/utils/app_style.dart';
+import 'package:yatri_car_task/features/payment/view/widgets/fare_breakup_widget.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/travel_route.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/trip_detail_row_widget.dart';
 
@@ -27,7 +29,44 @@ class TripDetailsSection extends StatelessWidget {
           SizedBox(height: 7),
           TripDetailRowWidget(leftText: "No. of Days", rightText: "2 Days"),
           SizedBox(height: 15),
-          TravelRoute()
+          TravelRoute(),
+          SizedBox(height: 26),
+          Text(
+            "Fare Breakup:",
+            style: AppStyle.getTextStyleBold16(context).copyWith(
+              color: AppColors.errorColor,
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          FareBreakUpWidget(
+              leftText: "Approx Roundtrip Distance :", rightText: "300 Kms."),
+          SizedBox(
+            height: 10,
+          ),
+          FareBreakUpWidget(
+              leftText: "Min Km Charged :", rightText: "250 Kms/day"),
+          SizedBox(
+            height: 10,
+          ),
+          FareBreakUpWidget(
+              leftText: "Approx Roundtrip Charge :\n(300 KM X RS 10/km)",
+              rightText: "Rs. 3000/-"),
+          SizedBox(
+            height: 10,
+          ),
+          FareBreakUpWidget(
+              leftText: "Driver Allowance :\n(Rs.300 X RS 1 Day)",
+              rightText: "Rs. 300/-"),
+          SizedBox(
+            height: 10,
+          ),
+          FareBreakUpWidget(
+              leftText: "GST :\n(5 % GST on RS. 3300)", rightText: "Rs. 165/-"),
+          SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );

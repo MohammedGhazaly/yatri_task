@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:yatri_car_task/core/utils/app_colors.dart';
+import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/renting_progress.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/apply_button.dart';
 import 'package:yatri_car_task/features/payment/view/widgets/coupon_code_button.dart';
@@ -36,7 +38,7 @@ class PaymentViewBody extends StatelessWidget {
               SizedBox(
                 height: 12,
               ),
-              TripDetailsSection()
+              TripDetailsSection(),
             ],
           ),
         ),
