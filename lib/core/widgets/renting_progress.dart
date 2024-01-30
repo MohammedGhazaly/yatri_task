@@ -71,18 +71,21 @@ class RentingProgress extends StatelessWidget {
               Text(
                 "Passenger \nDetails",
                 style: AppStyle.getTextStyleBold12(context).copyWith(
-                  color: isPayment == true
-                      ? Colors.white
-                      : Theme.of(context).primaryColor,
-                ),
+                    color: isPayment == true
+                        ? Colors.white
+                        : Theme.of(context).primaryColor,
+                    fontWeight:
+                        isPayment ? FontWeight.normal : FontWeight.w700),
               ),
               Text(
                 "Payment",
                 style: AppStyle.getTextStyleRegular12(context).copyWith(
-                  color: isPayment == true
-                      ? Theme.of(context).primaryColor
-                      : Colors.white,
-                ),
+                    color: isPayment == true
+                        ? Theme.of(context).primaryColor
+                        : Colors.white,
+                    fontWeight: isPayment == true
+                        ? FontWeight.w700
+                        : FontWeight.normal),
               ),
             ],
           ),

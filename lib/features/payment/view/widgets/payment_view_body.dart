@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:yatri_car_task/core/utils/app_assets.dart';
+import 'package:yatri_car_task/core/utils/app_colors.dart';
+import 'package:yatri_car_task/core/utils/app_style.dart';
 import 'package:yatri_car_task/core/widgets/renting_progress.dart';
+import 'package:yatri_car_task/features/payment/view/widgets/apply_button.dart';
+import 'package:yatri_car_task/features/payment/view/widgets/coupon_code_button.dart';
 
 class PaymentViewBody extends StatelessWidget {
   const PaymentViewBody({super.key});
@@ -12,12 +17,24 @@ class PaymentViewBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: 25),
               RentingProgress(
                 isPayment: true,
               ),
               SizedBox(
                 height: 20,
-              )
+              ),
+              Row(
+                children: [
+                  CouponCodeButton(),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Flexible(
+                    child: ApplyButton(),
+                  )
+                ],
+              ),
             ],
           ),
         ),
